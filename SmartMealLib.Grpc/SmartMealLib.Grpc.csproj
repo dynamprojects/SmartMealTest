@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SmartMealLib.Abstractions\SmartMealLib.Abstractions.csproj" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.76.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.34.1" />
+        <PackageReference Include="Grpc.Tools" Version="2.78.0" PrivateAssets="All" />
+        <ProjectReference Include="..\SmartMealLib.Http\SmartMealLib.Http.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\smart_meal.proto" ProtoRoot="Protos" GrpcServices="Client" />
+    </ItemGroup>
+
+</Project>

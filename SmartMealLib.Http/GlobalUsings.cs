@@ -1,0 +1,1 @@
+global using DomainModels = SmartMealLib.Abstractions.Models;

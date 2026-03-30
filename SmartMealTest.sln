@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMealLib.Abstractions", "SmartMealLib.Abstractions\SmartMealLib.Abstractions.csproj", "{FD234652-E33B-4DDF-BA57-9027B95501E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMealLib.Http", "SmartMealLib.Http\SmartMealLib.Http.csproj", "{8FB18001-9DAA-4918-B3CC-363707BC1A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMealLib.Grpc", "SmartMealLib.Grpc\SmartMealLib.Grpc.csproj", "{1E326A1E-6A24-45C5-ACC7-0E29C915657E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMealConsoleClient", "SmartMealConsoleClient\SmartMealConsoleClient.csproj", "{EA15B7D3-25DF-4AC2-BB76-C97FF8CD2631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMeal.MockServer", "SmartMeal.MockServer\SmartMeal.MockServer.csproj", "{7E9165B6-554A-436D-8535-3A372EB44F84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF722FFB-3F87-4E50-B6E0-47AE207AF73A}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+		.env.example = .env.example
+		.env = .env
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMealWPF", "SmartMealWPF\SmartMealWPF.csproj", "{BE609F39-DCB2-4B4C-805B-4F823869457E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD234652-E33B-4DDF-BA57-9027B95501E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD234652-E33B-4DDF-BA57-9027B95501E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD234652-E33B-4DDF-BA57-9027B95501E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD234652-E33B-4DDF-BA57-9027B95501E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB18001-9DAA-4918-B3CC-363707BC1A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB18001-9DAA-4918-B3CC-363707BC1A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB18001-9DAA-4918-B3CC-363707BC1A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB18001-9DAA-4918-B3CC-363707BC1A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E326A1E-6A24-45C5-ACC7-0E29C915657E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E326A1E-6A24-45C5-ACC7-0E29C915657E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E326A1E-6A24-45C5-ACC7-0E29C915657E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E326A1E-6A24-45C5-ACC7-0E29C915657E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA15B7D3-25DF-4AC2-BB76-C97FF8CD2631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA15B7D3-25DF-4AC2-BB76-C97FF8CD2631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA15B7D3-25DF-4AC2-BB76-C97FF8CD2631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA15B7D3-25DF-4AC2-BB76-C97FF8CD2631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9165B6-554A-436D-8535-3A372EB44F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9165B6-554A-436D-8535-3A372EB44F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9165B6-554A-436D-8535-3A372EB44F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9165B6-554A-436D-8535-3A372EB44F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE609F39-DCB2-4B4C-805B-4F823869457E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE609F39-DCB2-4B4C-805B-4F823869457E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE609F39-DCB2-4B4C-805B-4F823869457E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE609F39-DCB2-4B4C-805B-4F823869457E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
