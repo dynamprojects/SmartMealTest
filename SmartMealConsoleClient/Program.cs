@@ -55,16 +55,23 @@ await host.StartAsync();
 using (var scope = host.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();// 
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     var client = services.GetRequiredService<ISmartMealClient>();
-    
-    
-    dbContext.Database.EnsureCreated();
-    logger.LogInformation("БД и таблица инициализированы (или уже существовали)");
+
+    try
+    {
+        dbContext.Database.EnsureCreated();
+        logger.LogInformation("БД и таблица инициализированы (или уже существовали)");
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Ошибка сервера");
+        await host.StopAsync();
+        return;
+    }
     
     logger.LogInformation("Запуск");
- 
     
     IEnumerable<DomainModels.Dish>? dishes = null;
     try
@@ -85,9 +92,9 @@ using (var scope = host.Services.CreateScope())
     catch (Exception ex)
     {
         logger.LogError(ex, "Ошибка сервера");
-        Console.WriteLine(ex.Message);
         
-        await host.StopAsync(); 
+        await host.StopAsync();
+        return;
     }
     
     
@@ -97,7 +104,9 @@ using (var scope = host.Services.CreateScope())
     {
         Console.WriteLine("\nВведите блюда (Код:Количество;Код:Количество...):");
         var input = Console.ReadLine()?.Trim();
-
+        
+        Log.Information("Пользователь ввел блюда: {Input}", input);
+        
         if (string.IsNullOrEmpty(input))
         {
             Console.WriteLine("Ввод пустой. Повторите.");
