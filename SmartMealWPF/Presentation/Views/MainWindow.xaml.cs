@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using SmartMealWPF.Domain.Entities;
+using SmartMealWPF.Helpers;
 using SmartMealWPF.Presentation.ViewModels;
 
 namespace SmartMealWPF.Presentation.Views
@@ -31,16 +32,15 @@ namespace SmartMealWPF.Presentation.Views
         
         private void OnlyText_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = !e.Text.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+            e.Handled = !ValidationInputHelper.Validate(e.Text);
         }
         
         private void OnPaste(object sender, DataObjectPastingEventArgs e)
         {
             if (e.DataObject.GetDataPresent(typeof(string)))
             {
-                string text = (string)e.DataObject.GetData(typeof(string));
-                
-                if (!text.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                string text = (string)e.DataObject.GetData(typeof(string))!;
+                if (!ValidationInputHelper.Validate(text))
                 {
                     e.CancelCommand();
                 }
