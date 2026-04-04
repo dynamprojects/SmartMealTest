@@ -34,7 +34,6 @@ public static class Program
             {
                 services.AddSingleton(context.Configuration);
                 
-                services.AddSingleton<IVariableRepository, VariableVariableRepository>();
                 services.AddSingleton<IVariableRepository, AppSettingsRepository>();
                 
                 services.AddSingleton<IEnvironmentService, EnvironmentService>();
