@@ -11,14 +11,6 @@ namespace SmartMealWPF.Presentation.Views
         {
             InitializeComponent();
             DataContext = viewModel;
-            
-            EnvDataGrid.CellEditEnding += async (s, e) =>
-            {
-                if (e.Column.Header?.ToString() == "Значение" && e.Row.Item is EnvVariable item)
-                {
-                    await ((MainViewModel)DataContext).UpdateCommand.ExecuteAsync(item);
-                }
-            };
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
